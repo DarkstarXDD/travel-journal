@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/src/assets/fonts/Inter-VariableFont_slnt_wght.woff2");
+}
+
+/* ------------------- CSS Reset ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+*:focus-visible {
+  outline: 0.125rem dotted red;
+  outline-offset: 0.125rem;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: grey;
+}

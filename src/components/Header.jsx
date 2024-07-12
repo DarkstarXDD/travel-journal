@@ -1,0 +1,8 @@
+export default function Header() {
+  return (
+    <header className="header">
+      <img className="header__logo" src="" alt="" />
+      <h1 className="header__title">My Travel Journal.</h1>
+    </header>
+  )
+}
