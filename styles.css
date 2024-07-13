@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 *:focus-visible {
@@ -24,8 +23,116 @@ picture {
   height: auto;
 }
 
+/* ------------------- Utility Classes ------------------- */
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Inter", sans-serif;
+  font-size: 1rem;
   font-weight: 400;
-  background-color: grey;
+  text-align: center;
+  color: white;
+  background-color: white;
+}
+
+.wrapper {
+  max-width: 48rem;
+}
+
+.header {
+  gap: 1rem;
+  background-color: #f55a5a;
+  padding: 1rem;
+}
+
+.header__logo {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+.header__title {
+  font-size: 1.5rem;
+}
+
+.card-section {
+  background-color: #23272e;
+  padding: 1.5rem;
+}
+
+.card {
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #23272e;
+}
+
+.card__image {
+  border: 0.125rem solid #f55a5a;
+  border-radius: 8px;
+}
+
+.card__text-content {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__location-wrapper {
+  gap: 0.5rem;
+}
+
+.card__location-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: #f55a5a;
+}
+
+.card__location {
+  letter-spacing: 0.125rem;
+}
+
+.card__location-url {
+  font-size: 0.875rem;
+  color: #b9b9b9;
+}
+
+.card__date {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.hr {
+  width: 100%;
+  border: none;
+  height: 0.125rem;
+  background-color: #f55a5a;
+  margin-block: 1rem;
+}
+
+@media (min-width: 36rem) {
+  body {
+    text-align: start;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card__text-content {
+    align-items: start;
+  }
 }
