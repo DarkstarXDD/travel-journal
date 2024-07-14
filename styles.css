@@ -11,7 +11,7 @@
 }
 
 *:focus-visible {
-  outline: 0.125rem dotted red;
+  outline: 0.125rem dotted #f55a5a;
   outline-offset: 0.125rem;
 }
 
@@ -24,6 +24,15 @@ picture {
 }
 
 /* ------------------- Utility Classes ------------------- */
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .flex-row {
   display: flex;
   justify-content: center;
@@ -36,6 +45,7 @@ picture {
   justify-content: center;
   align-items: center;
 }
+/* ------------------- End of Utility Classes ------------------- */
 
 body {
   display: flex;
@@ -47,7 +57,12 @@ body {
   font-weight: 400;
   text-align: center;
   color: white;
-  background-color: white;
+  background-color: rgb(100, 100, 100);
+}
+
+.main {
+  padding: 1.5rem;
+  background-color: #23272e;
 }
 
 .wrapper {
@@ -68,11 +83,6 @@ body {
 
 .header__title {
   font-size: 1.5rem;
-}
-
-.card-section {
-  background-color: #23272e;
-  padding: 1.5rem;
 }
 
 .card {

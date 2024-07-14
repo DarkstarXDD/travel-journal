@@ -1,11 +1,11 @@
-export default function Card() {
+export default function Card(props) {
   return (
     <section className="card-section">
       <div className="card flex-row">
         <img
           className="card__image"
-          src="/mount-fuji.webp"
-          alt=""
+          src={props.item.imageSource}
+          alt={props.item.imageAlt}
           width="200"
           height="220"
         />
@@ -16,25 +16,25 @@ export default function Card() {
                 className="card__location-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
+                aria-hidden="true"
+                focusable="false"
               >
                 <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
               </svg>
-              <p className="card__location">Japan</p>
+              <p className="card__location">{props.item.location}</p>
             </div>
             <a
               className="card__location-url"
-              href="https://maps.app.goo.gl/XiqoDd3MBENW4SbT8"
+              href={props.item.googleMapsUrl}
+              target="_blank"
             >
               View on Google Maps
+              <span className="visually-hidden">open on a new tab</span>
             </a>
           </div>
-          <h2 className="card__title">Mount Fuji</h2>
-          <p className="card__date">12 Jan, 2021 - 24 Jan, 2021</p>
-          <p className="card__description">
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
-          </p>
+          <h2 className="card__title">{props.item.title}</h2>
+          <p className="card__date">{`${props.item.startDate} - ${props.item.endDate}`}</p>
+          <p className="card__description">{props.item.description}</p>
         </div>
       </div>
       <hr className="hr" />
