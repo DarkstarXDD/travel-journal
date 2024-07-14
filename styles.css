@@ -88,10 +88,10 @@ body {
 .card {
   flex-direction: column;
   gap: 1.5rem;
-  background-color: #23272e;
 }
 
 .card__image {
+  width: 12.5rem;
   border: 0.125rem solid #f55a5a;
   border-radius: 8px;
 }
